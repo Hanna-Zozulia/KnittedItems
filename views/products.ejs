@@ -1,0 +1,31 @@
+<%- include('inc/head.ejs') %>
+
+<main>
+    <% if (knittedItems.length > 0) { %>
+    <div class="grid">
+        <% for (let knittedItem of knittedItems) { %>
+        <article class="card product-item">
+            <div class="card__image">
+                <!-- Добавляем изображения товара -->
+                <img src="<%= knittedItem.imageUrl %>" alt="<%= knittedItem.name %>">
+            </div>
+            <header class="card__header">
+                <h1 class="product__title"><%= knittedItem.name %></h1>
+            </header>
+            <div class="card__content">
+                <h2 class="product__price"><%= knittedItem.price %> €</h2>
+                <p class="product__description"><%= knittedItem.description %></p>
+                <p><b>Размер: <%= knittedItem.size %> см</b></p>
+            </div>
+            <div class="card__actions">
+                <a href="/products/<%= knittedItem.id %>" class="btn">Подробнее...</a>
+            </div>
+        </article>
+        <% } %>
+    </div>
+    <% } else { %>
+    <h1>No Products Found!</h1>
+    <% } %>
+</main>
+
+<%- include('inc/end.ejs') %>

@@ -1,0 +1,59 @@
+<%- include('inc/head.ejs') %>
+
+  <div class="container">
+    <h2 class="about">О нас</h2>
+    <p class="about-text">
+      Магазин «KnittedItems» — это команда энтузиастов, которые любят качественные товары и честный сервис.
+      Мы начали свой путь в 2018 году и с тех пор помогаем тысячам покупателей делать правильный выбор.
+      Наша миссия — сделать покупки удобными, быстрыми и приятными для каждого клиента.
+    </p>
+
+    <h2 class="about">Лучшие товары из каждой категории</h2>
+    <div class="grid">
+      <% if (topItems && topItems.length > 0) { %>
+        <% topItems.forEach(item => { %>
+          <article class="card product-item">
+          <div class="card__image">
+            <img src="<%= item.imageUrl %>" alt="<%= item.name %>" width="150">
+          </div>
+          <header class="card__header">
+            <h1 class="product__title"><%= item.name %></h1>
+          </header>
+          <div class="card__content"> 
+            <p class="product__description">Категория: <%= item.category %></p>
+            <h2 class="product__price">Цена: <%= item.price %> €</h2>
+          </div>
+            <div class="card__actions">
+              <a href="/products/<%= item.id %>" class="btn">Подробнее...</a>
+            </div>
+          </article>
+        <% }) %>
+      <% } else { %>
+        <p>Пока нет товаров для отображения.</p>
+      <% } %>
+    </div>
+
+    <h2 class="about">Наша команда</h2>
+    <div class="team">
+      <div class="team-member">
+        <img src="img/anna.jpg" alt="Анна Иванова">
+        <h3>Анна Иванова</h3>
+        <p>Директор</p>
+      </div>
+
+      <div class="team-member">
+        <img src="https://thumbs.dreamstime.com/b/young-businessman-23652598.jpg" alt="Пётр Сидоров">
+        <h3>Пётр Сидоров</h3>
+        <p>Менеджер по продажам</p>
+      </div>
+
+      <div class="team-member">
+        <img src="img/marija.jpg" alt="Мария Кузнецова">
+        <h3>Мария Кузнецова</h3>
+        <p>Маркетолог</p>
+      </div>
+    </div>
+  </div>
+
+<%- include('inc/end.ejs') %>
+  

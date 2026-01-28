@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- В EJS тег<%= %> используетьбся для вывода значения переменной в HTML. Здесь мы выводим значение переменной pageTitle, которую передаем из контроллера. Это позволяет нам задать уникальный заголовок для каждой страницы. -->
+
+        <title><%= pageTitle %></title>
+        <link rel="stylesheet" href="/css/style.css">
+    </head>
+    <body>
+        <header class="main-header">
+            <nav class="main-header__nav">
+                <ul class="main-header__item-list">
+                    <li class="main-header__item">
+                        <!-- Здесь мы используем переменную path, чтобы определять активную ссылку. Если path равен '/', ссылка добавляет класс 'active'.  
+                        -->
+                        <a class="<%= path === '/' ? 'active' : '' %>" href="/">KnittedItems</a>
+                    </li>
+                    <li class="main-header__item">
+                        <a class="<%= path === '/about' ? 'active' : '' %>" href="/about">О нас</a>
+                    </li>
+                        
+                    
+                    
+                </ul>
+            </nav>
+        </header>

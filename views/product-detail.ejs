@@ -1,0 +1,16 @@
+<%- include('inc/head.ejs') %>
+
+<main class="centered product-detail">
+    <h1><%= knittedItem.name %></h1>
+    <hr>
+    <div class="card__image">
+        <img src="<%= knittedItem.imageUrl %>" alt="<%= knittedItem.name %>">
+    </div>
+    <h2>Категория: <%= knittedItem.category %></h2>
+    <p><strong>Price: <%= knittedItem.price %> €</strong></p>
+    <p><%= knittedItem.description %></p>
+    <p>Размер: <%= knittedItem.size %> см</p>
+    <a href="<%= previousPage %>" class="btn">Назад к списку</a>
+</main>
+
+<%- include('inc/end.ejs') %>

@@ -1,0 +1,26 @@
+{
+  "name": "js_mvc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencyNotes": {
+    "dotenv": "Загружает переменные окружения из файла .env. Используеться для безопасного хранения конфигурации, например, данные для подключения БД.",
+    "ejs": "Шаблонизатор (Embedded JavaScript). Позволяет встраивать JavaScript в HTML-код для создания динамических веб-приложений.",
+    "express": "Веб-фреймворк для Node.js. Упрощает создание веб-сервера, обработку запросов и маршрутизацию.",
+    "mysql2": "Драйвер для подключения к базе данных MySQL. Необходим для работы Sequelize с MySQL.",
+    "sequelize": "ORM (Object-Relational Mapping) для Node.js. Позволяет работать с базой данных, используя JavaScript-объекты и модели, вместо написания SQL-запросов вручную."
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "mysql2": "^3.15.2",
+    "sequelize": "^6.37.7"
+  }
+}
